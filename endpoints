@@ -1,0 +1,180 @@
+{
+  "info": {
+    "_postman_id": "5b8d68d0-77d9-4767-8bb0-c05bef9b0580",
+    "name": "UbiStart",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32818811"
+  },
+  "item": [
+    {
+      "name": "RegisterUser",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"teste@teste.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LoginUser",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"teste@teste.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CreateTodo",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU4NzQyODU5LWY3MjAtNDliNy1hNWM3LWFkNWVmY2ZiMmMxYSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzcyMDM4NjI3LCJleHAiOjE3NzIxMjUwMjd9.pcH0JQRQJRr_3UKHrmPyeK7XwQdUqMd_EBkMj2skPk8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"description\": \"Estudar React\",\r\n  \"due_date\": \"2026-02-27T19:00:00\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/todos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAllTodos",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU4NzQyODU5LWY3MjAtNDliNy1hNWM3LWFkNWVmY2ZiMmMxYSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzcyMDM4NjI3LCJleHAiOjE3NzIxMjUwMjd9.pcH0JQRQJRr_3UKHrmPyeK7XwQdUqMd_EBkMj2skPk8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/todos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateTodo",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU4NzQyODU5LWY3MjAtNDliNy1hNWM3LWFkNWVmY2ZiMmMxYSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzcyMDM4NjI3LCJleHAiOjE3NzIxMjUwMjd9.pcH0JQRQJRr_3UKHrmPyeK7XwQdUqMd_EBkMj2skPk8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"description\": \"Estudar Node avançado\",\r\n  \"due_date\": \"2026-03-01T23:59:00\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/todos/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "todos",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1e3b2a0f-7c04-47e2-bf62-21c798ad1b06"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
